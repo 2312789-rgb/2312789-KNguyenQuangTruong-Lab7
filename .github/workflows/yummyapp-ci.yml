@@ -5,6 +5,16 @@ on:
     branches: [main, master]
   pull_request:
     branches: [main, master]
+  workflow_dispatch:
+    inputs:
+      stage:
+        description: "Choose the level-1 coverage failure or the complete suite"
+        required: true
+        type: choice
+        options:
+          - full
+          - level1
+        default: full
 
 jobs:
   mobile-test-job:
