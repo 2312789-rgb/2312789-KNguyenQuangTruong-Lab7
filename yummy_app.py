@@ -54,3 +54,6 @@ class YummyApp:
             return RESTAURANTS_BY_LOCATION.get(location_key, [])
         except gps_service.GPSSignalLostError:
             return "Unable to determine location."
+
+
+def intentional_syntax_error(
